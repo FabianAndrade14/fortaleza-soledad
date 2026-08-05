@@ -1,0 +1,50 @@
+<section class="archive">
+
+    <div class="container">
+
+        <span class="section-tag">
+            El Archivo
+        </span>
+
+        <h2>
+            Explora los universos que forman parte
+            de la Fortaleza.
+        </h2>
+
+        <p class="description">
+            Cada sección reúne contenido dedicado a una parte diferente
+            de la cultura geek. Descubre artículos, recomendaciones,
+            colecciones e historias.
+        </p>
+
+        <div class="archive-grid">
+
+            @for(category of categories; track category.title){
+
+                <article class="archive-card">
+
+                    <span class="icon">
+                        {{category.icon}}
+                    </span>
+
+                    <h3>
+                        {{category.title}}
+                    </h3>
+
+                    <p>
+                        {{category.description}}
+                    </p>
+
+                    <button>
+                        Explorar →
+                    </button>
+
+                </article>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

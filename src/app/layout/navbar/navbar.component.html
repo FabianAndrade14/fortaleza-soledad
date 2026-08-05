@@ -1,0 +1,84 @@
+<header class="navbar">
+
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <div class="logo">
+
+      <img src="assets/img/logo-fortress.png" alt="Logo Fortaleza de la Soledad" class="logo-image">
+
+      <div class="logo-text">
+
+        <span class="title">
+          Fortaleza
+        </span>
+
+        <span class="subtitle">
+          de la Soledad
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="desktop-menu">
+
+      <a href="#">
+        Inicio
+      </a>
+
+      <a href="#">
+        Archivo
+      </a>
+
+      <a href="#">
+        Historias
+      </a>
+
+      <a href="#">
+        Comunidad
+      </a>
+
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="actions">
+
+      <button class="explore-btn">
+        Explorar
+      </button>
+
+      <!-- Mobile Button -->
+      <button class="menu-btn" (click)="toggleMenu()">
+
+        ☰
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+
+    <a href="#">
+      Inicio
+    </a>
+
+    <a href="#">
+      Archivo
+    </a>
+
+    <a href="#">
+      Historias
+    </a>
+
+    <a href="#">
+      Comunidad
+    </a>
+
+  </div>
+
+</header>

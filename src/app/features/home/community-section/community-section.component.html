@@ -1,0 +1,65 @@
+<section class="community">
+
+    <div class="container">
+
+        <span class="section-tag">
+            Comunidad
+        </span>
+
+        <h2>
+            La Fortaleza existe gracias a las personas que
+            siguen creyendo en las grandes historias.
+        </h2>
+
+        <p class="description">
+
+            Comparte tus colecciones, tus videojuegos favoritos,
+            tus héroes y las historias que te marcaron. Este espacio
+            está construido para quienes disfrutan la cultura geek
+            desde la pasión y el respeto.
+
+        </p>
+
+        <div class="social-grid">
+
+            @for(link of socialLinks; track link.title){
+
+                <a
+                    class="social-card"
+                    [href]="link.url"
+                    target="_blank">
+
+                    <span class="icon">
+                        {{ link.icon }}
+                    </span>
+
+                    <h3>
+                        {{ link.title }}
+                    </h3>
+
+                    <p>
+                        {{ link.username }}
+                    </p>
+
+                </a>
+
+            }
+
+        </div>
+
+        <div class="community-message">
+
+            <h3>
+                Toda historia merece ser compartida.
+            </h3>
+
+            <p>
+                Bienvenido a un lugar donde cada colección,
+                cada personaje y cada aventura tienen un espacio.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
