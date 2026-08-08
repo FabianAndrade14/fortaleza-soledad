@@ -1,240 +1,405 @@
 .hero {
 
-    position: relative;
+  position: relative;
 
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: calc(100vh - 80px);
 
-    display: flex;
-    align-items: center;
+  min-height: 600px;
 
-    padding: 0 10%;
+  overflow: hidden;
 
-    overflow: hidden;
+  display: flex;
+  align-items: center;
 
-    background-image: url('/assets/images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background: #020617;
 
 }
+
+
+/* =========================================
+   BACKGROUND
+   ========================================= */
+
+.hero-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url('/assets/img/fortaleza-hero.jpg');
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  transform: scale(1.01);
+
+}
+
+
+/* =========================================
+   OVERLAY
+   ========================================= */
 
 .hero-overlay {
 
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 6, 23, 0.65) 0%,
+      rgba(2, 6, 23, 0.20) 45%,
+      rgba(2, 6, 23, 0.10) 100%
+    );
+
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1200px, 90%);
+
+  margin: 0 auto;
+
+  padding-top: 40px;
+
+  color: white;
+
+}
+
+
+.hero-tag {
+
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #f97316;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+}
+
+
+.hero h1 {
+
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  line-height: 0.98;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+}
+
+
+.hero p {
+
+  max-width: 600px;
+
+  margin: 30px 0;
+
+  color: #e2e8f0;
+
+  font-size: 1.15rem;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.hero-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+  padding: 14px 28px;
+
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+
+}
+
+
+.primary-btn {
+
+  border: 1px solid #f97316;
+
+  background: #f97316;
+
+  color: white;
+
+}
+
+
+.primary-btn:hover {
+
+  background: #ea580c;
+
+  transform: translateY(-2px);
+
+}
+
+
+.secondary-btn {
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: rgba(0, 0, 0, 0.15);
+
+  color: white;
+
+  backdrop-filter: blur(5px);
+
+}
+
+
+.secondary-btn:hover {
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: white;
+
+  transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
+
+.scroll-indicator {
+
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  z-index: 3;
+
+  transform: translateX(-50%);
+
+}
+
+
+.scroll-indicator span {
+
+  display: block;
+
+  width: 24px;
+
+  height: 40px;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 20px;
+
+  position: relative;
+
+}
+
+
+.scroll-indicator span::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: 7px;
+
+  left: 50%;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transform: translateX(-50%);
+
+  animation: scroll 1.6s infinite;
+
+}
+
+
+@keyframes scroll {
+
+  0% {
+
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translate(-50%, 15px);
+
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+
+    height: 75vh;
+
+    min-height: 550px;
+
+  }
+
+  .hero-background {
+
+    background-position: center center;
+
+  }
+
+  .hero-content {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+  .hero h1 {
+
+    max-width: 650px;
+
+  }
+
+  .hero p {
+
+    max-width: 600px;
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+
+    height: 80vh;
+
+    min-height: 520px;
+
+  }
+
+  .hero-background {
+
+    background-position: center center;
+
+  }
+
+  .hero-overlay {
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(2,6,23,.95) 15%,
-            rgba(2,6,23,.75) 45%,
-            rgba(2,6,23,.45) 100%
-        );
+      linear-gradient(
+        180deg,
+        rgba(2, 6, 23, 0.30),
+        rgba(2, 6, 23, 0.75)
+      );
 
-}
+  }
 
-.hero-content{
+  .hero h1 {
 
-    position: relative;
+    font-size: clamp(2.5rem, 12vw, 4rem);
 
-    z-index: 2;
+  }
 
-    max-width: 700px;
+  .hero p {
 
-}
+    font-size: 1rem;
 
-.hero-tag{
+  }
 
-    display: inline-block;
+  .hero-actions {
 
-    margin-bottom: 20px;
+    flex-direction: column;
 
-    color: #f97316;
+    width: 100%;
 
-    font-weight: 600;
+  }
 
-    text-transform: uppercase;
+  .primary-btn,
+  .secondary-btn {
 
-    letter-spacing: 4px;
+    width: 100%;
 
-}
+    max-width: 280px;
 
-.hero h1{
-
-    margin:0;
-
-    color:white;
-
-    font-size: clamp(3rem,6vw,5rem);
-
-    font-weight:700;
-
-    line-height:1.1;
-
-}
-
-.hero p{
-
-    margin:35px 0;
-
-    color:#cbd5e1;
-
-    font-size:1.2rem;
-
-    line-height:1.8;
-
-}
-
-.hero-actions{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.primary-btn{
-
-    padding:15px 32px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#f97316;
-
-    color:white;
-
-    font-size:1rem;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.primary-btn:hover{
-
-    background:#ea580c;
-
-    transform:translateY(-2px);
-
-}
-
-.secondary-btn{
-
-    padding:15px 32px;
-
-    border-radius:10px;
-
-    background:transparent;
-
-    border:1px solid rgba(255,255,255,.3);
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.secondary-btn:hover{
-
-    background:rgba(255,255,255,.08);
-
-}
-
-.scroll-indicator{
-
-    position:absolute;
-
-    bottom:40px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:2;
-
-}
-
-.scroll-indicator span{
-
-    display:block;
-
-    width:24px;
-
-    height:40px;
-
-    border:2px solid rgba(255,255,255,.5);
-
-    border-radius:20px;
-
-    position:relative;
-
-}
-
-.scroll-indicator span::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:8px;
-    left:50%;
-
-    width:5px;
-    height:5px;
-
-    border-radius:50%;
-
-    background:white;
-
-    transform:translateX(-50%);
-
-    animation:scroll 1.6s infinite;
-
-}
-
-@keyframes scroll{
-
-    0%{
-
-        opacity:1;
-        transform:translate(-50%,0);
-
-    }
-
-    100%{
-
-        opacity:0;
-        transform:translate(-50%,14px);
-
-    }
-
-}
-
-@media(max-width:768px){
-
-    .hero{
-
-        padding:0 30px;
-
-        justify-content:center;
-
-        text-align:center;
-
-    }
-
-    .hero-actions{
-
-        justify-content:center;
-
-    }
+  }
 
 }

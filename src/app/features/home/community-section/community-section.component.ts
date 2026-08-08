@@ -21,19 +21,19 @@ export class CommunitySectionComponent {
     {
       title: 'Facebook',
       username: 'Fortaleza de la Soledad',
-      icon: '📘',
+      icon: 'fa-brands fa-facebook',
       url: '#'
     },
     {
       title: 'Instagram',
       username: '@fortalezadelasoledad',
-      icon: '📷',
+      icon: 'fa-brands fa-instagram',
       url: '#'
     },
     {
       title: 'YouTube',
       username: 'Fortaleza de la Soledad',
-      icon: '▶️',
+      icon: 'fa-brands fa-youtube',
       url: '#'
     }
   ];
