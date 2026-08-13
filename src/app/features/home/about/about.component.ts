@@ -52,16 +52,7 @@ export class AboutComponent {
       role: 'Colaborador',
       image: './assets/img/member-1.png'
     },
-    {
-      name: 'Miembro 2',
-      role: 'Colaborador',
-      image: 'assets/images/about/member-2.jpg'
-    },
-    {
-      name: 'Miembro 3',
-      role: 'Colaborador',
-      image: 'assets/images/about/member-3.jpg'
-    }
+
   ];
 
 }
