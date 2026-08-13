@@ -1,70 +1,187 @@
-<section class="about">
+<section class="about-page">
 
-    <div class="container">
+  <!-- HEADER -->
 
-        <span class="section-tag">
-            Sobre Nosotros
-        </span>
+  <header class="about-header">
 
-        <h2>
-            Más que un sitio web.
-            Un lugar para quienes crecieron creyendo en héroes.
-        </h2>
+    <span class="section-tag">
+      Conócenos
+    </span>
 
-        <p class="intro">
+    <h1>
+      La historia detrás de
+      <strong>Fortaleza de la Soledad</strong>
+    </h1>
 
-            Fortaleza de la Soledad nace con la intención de reunir a
-            quienes encuentran inspiración en los cómics, los videojuegos,
-            el cine, las figuras de colección y todas aquellas historias
-            que nos acompañan incluso cuando dejamos de ser niños.
+    <p>
+      Un lugar construido alrededor de las historias,
+      los personajes y las experiencias que nos han
+      acompañado durante años.
+    </p>
 
-        </p>
+  </header>
 
-        <div class="about-grid">
 
-            <article class="card">
+  <!-- MISIÓN / VISIÓN -->
 
-                <h3>
-                    Nuestra Historia
-                </h3>
+  <section class="mission-vision">
 
-                <p>
-                    Este proyecto surge de la idea de que una historia puede
-                    cambiar una vida. Aquí compartimos experiencias,
-                    recomendaciones y recuerdos que siguen inspirándonos.
-                </p>
+    <article class="info-card">
 
-            </article>
+      <div class="card-number">
+        01
+      </div>
 
-            <article class="card">
+      <h2>
+        Misión
+      </h2>
 
-                <h3>
-                    Nuestra Misión
-                </h3>
+      <p>
+        {{ mission }}
+      </p>
 
-                <p>
-                    Construir una comunidad donde la cultura geek sea un punto
-                    de encuentro, conversación y aprendizaje para todos.
-                </p>
+    </article>
 
-            </article>
 
-            <article class="card">
+    <article class="info-card">
 
-                <h3>
-                    Nuestra Esencia
-                </h3>
+      <div class="card-number">
+        02
+      </div>
 
-                <p>
-                    Creemos que los héroes, los videojuegos y las grandes
-                    historias no solo entretienen; también enseñan valores,
-                    resiliencia y esperanza.
-                </p>
+      <h2>
+        Visión
+      </h2>
 
-            </article>
+      <p>
+        {{ vision }}
+      </p>
 
-        </div>
+    </article>
+
+  </section>
+
+
+  <!-- HISTORIA -->
+
+  <section class="history-section">
+
+    <div class="history-content">
+
+      <span class="section-tag">
+        Nuestra historia
+      </span>
+
+      <h2>
+        Todo comenzó con una pasión.
+      </h2>
+
+      <p>
+        {{ history }}
+      </p>
 
     </div>
+
+  </section>
+
+
+  <!-- FUNDADOR -->
+
+  <section class="founder-section">
+
+    <span class="section-tag">
+      El comienzo
+    </span>
+
+    <h2>
+      Fundador
+    </h2>
+
+    <article class="founder-card">
+
+      <div class="founder-image">
+
+        <img
+          [src]="founder.image"
+          [alt]="founder.name">
+
+      </div>
+
+      <div class="founder-info">
+
+        <h3>
+          {{ founder.name }}
+        </h3>
+
+        <span>
+          {{ founder.role }}
+        </span>
+
+        <p>
+          La persona detrás de la idea y de la construcción
+          de este espacio.
+        </p>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- MIEMBROS -->
+
+  <section class="members-section">
+
+    <div class="members-header">
+
+      <span class="section-tag">
+        La comunidad
+      </span>
+
+      <h2>
+        Nuestros miembros
+      </h2>
+
+      <p>
+        Personas que hacen parte de esta historia.
+      </p>
+
+    </div>
+
+
+    <div class="members-grid">
+
+      @for (member of members; track member.name) {
+
+        <article class="member-card">
+
+          <div class="member-image">
+
+            <img
+              [src]="member.image"
+              [alt]="member.name">
+
+          </div>
+
+          <div class="member-info">
+
+            <h3>
+              {{ member.name }}
+            </h3>
+
+            <span>
+              {{ member.role }}
+            </span>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </section>
 
 </section>
