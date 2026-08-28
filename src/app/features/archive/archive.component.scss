@@ -1,0 +1,458 @@
+.archive-page {
+
+  min-height: 100vh;
+
+  padding:
+    150px
+    0
+    100px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(249, 115, 22, .10),
+      transparent 35%
+    ),
+    #020617;
+
+  color: white;
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.archive-header {
+
+  width: min(850px, 90%);
+
+  margin:
+    0
+    auto
+    80px;
+
+  text-align: center;
+
+}
+
+.section-tag {
+
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #f97316;
+
+  font-size: .75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+}
+
+.archive-header h1 {
+
+  margin: 0;
+
+  font-size: clamp(
+    3rem,
+    7vw,
+    5.5rem
+  );
+
+  line-height: .95;
+
+  letter-spacing: -3px;
+
+}
+
+.archive-header h1 strong {
+
+  display: block;
+
+  color: #f97316;
+
+}
+
+.archive-header p {
+
+  max-width: 650px;
+
+  margin:
+    30px
+    auto
+    0;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   CATEGORIES
+   ========================================= */
+
+.archive-categories {
+
+  width: min(1200px, 90%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 25px;
+
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.archive-card {
+
+  position: relative;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background-color: #0f172a;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, .08);
+
+  isolation: isolate;
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease;
+
+}
+
+
+/*
+  IMPORTANTE:
+
+  La tarjeta es quien recorta todo su contenido.
+  De esta forma la imagen de fondo y el overlay
+  nunca pueden salir de las esquinas redondeadas.
+*/
+
+.archive-card:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(249, 115, 22, .45);
+
+}
+
+
+/* =========================================
+   OVERLAY
+   ========================================= */
+
+.card-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(2, 6, 23, .98) 0%,
+      rgba(2, 6, 23, .70) 45%,
+      rgba(2, 6, 23, .10) 100%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.card-content {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 30px;
+
+}
+
+.card-index {
+
+  align-self: flex-end;
+
+  color:
+    rgba(255, 255, 255, .45);
+
+  font-size: .8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+}
+
+.card-content h2 {
+
+  margin:
+    0
+    0
+    10px;
+
+  font-size: 2.4rem;
+
+  letter-spacing: -1px;
+
+}
+
+.card-content p {
+
+  max-width: 400px;
+
+  margin:
+    0
+    0
+    22px;
+
+  color: #cbd5e1;
+
+  font-size: .95rem;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================
+   LINK
+   ========================================= */
+
+.explore-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: .9rem;
+
+  font-weight: 700;
+
+  transition:
+    color .3s ease,
+    gap .3s ease;
+
+}
+
+.explore-link span {
+
+  font-size: 1.2rem;
+
+  transition:
+    transform .3s ease;
+
+}
+
+.archive-card:hover
+.explore-link {
+
+  color: #f97316;
+
+  gap: 15px;
+
+}
+
+.archive-card:hover
+.explore-link span {
+
+  transform:
+    translateX(4px);
+
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+   ========================================= */
+
+.archive-message {
+
+  width: min(850px, 90%);
+
+  margin:
+    120px
+    auto
+    0;
+
+  padding:
+    70px
+    40px;
+
+  text-align: center;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, .08);
+
+}
+
+.archive-message h2 {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      2rem,
+      5vw,
+      3.5rem
+    );
+
+  line-height: 1;
+
+}
+
+.archive-message h2 span {
+
+  display: block;
+
+  color: #f97316;
+
+}
+
+.archive-message p {
+
+  max-width: 600px;
+
+  margin:
+    25px
+    auto
+    0;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .archive-page {
+
+    padding-top: 120px;
+
+  }
+
+  .archive-categories {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .archive-card {
+
+    min-height: 330px;
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .archive-header h1 {
+
+    font-size: 3rem;
+
+  }
+
+  .archive-header h1 strong {
+
+    margin-top: 8px;
+
+  }
+
+  .archive-card {
+
+    min-height: 300px;
+
+    border-radius: 18px;
+
+  }
+
+  .card-content {
+
+    padding: 24px;
+
+  }
+
+  .card-content h2 {
+
+    font-size: 2rem;
+
+  }
+
+  .archive-message {
+
+    padding:
+      60px
+      20px;
+
+  }
+
+}

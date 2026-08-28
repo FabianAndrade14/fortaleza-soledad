@@ -1,0 +1,96 @@
+<section class="archive-page">
+
+  <!-- HERO -->
+
+  <header class="archive-header">
+
+    <span class="section-tag">
+      El Archivo
+    </span>
+
+    <h1>
+      Donde viven
+      <strong>nuestras historias.</strong>
+    </h1>
+
+    <p>
+      Un espacio dedicado a los universos, personajes,
+      historias y recuerdos que han formado parte de
+      nuestra vida.
+    </p>
+
+  </header>
+
+
+  <!-- CATEGORIES -->
+
+  <section class="archive-categories">
+
+    @for (category of categories; track category.title) {
+
+      <article
+        class="archive-card"
+        [style.background-image]="'url(' + category.image + ')'">
+
+        <div class="card-overlay"></div>
+
+        <div class="card-content">
+
+          <span class="card-index">
+            {{ $index + 1 | number:'2.0-0' }}
+          </span>
+
+          <div>
+
+            <h2>
+              {{ category.title }}
+            </h2>
+
+            <p>
+              {{ category.description }}
+            </p>
+
+            <a
+              [href]="category.route"
+              class="explore-link">
+
+              Explorar
+
+              <span>
+                →
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    }
+
+  </section>
+
+
+  <!-- CLOSING MESSAGE -->
+
+  <section class="archive-message">
+
+    <span class="section-tag">
+      La Fortaleza
+    </span>
+
+    <h2>
+      Algunas historias
+      <span>nunca se olvidan.</span>
+    </h2>
+
+    <p>
+      Este archivo crecerá con el tiempo, igual que nuestras
+      colecciones y los recuerdos que las acompañan.
+    </p>
+
+  </section>
+
+</section>
