@@ -24,7 +24,7 @@ export class ArchiveComponent {
     {
       title: 'Cómics',
       description: 'Historias, personajes y aventuras que viven entre páginas.',
-      image: '../assets/img/comics.png',
+      image: '',
       route: '/archive/comics'
     },
 
